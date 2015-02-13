@@ -1,0 +1,2 @@
+■background.jsからcontentscript.jsにメッセージを送る方法
+http://tigawa.github.io/blog/2013/10/13/chrome-extensions-message/

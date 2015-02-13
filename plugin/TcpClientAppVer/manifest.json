@@ -1,0 +1,24 @@
+{
+	"name" : "Tcp Client Server(App ver)",
+	"version" : "1.0",
+	"manifest_version" : 2,
+	"description" : "Tcp Client Server Test.",
+	"icons": { 
+		"16": "image/icon16.png",
+		"48": "image/icon48.png",
+		"128": "image/icon128.png" },
+	"app": {
+		"background": {
+			"scripts": ["js/main.js", "js/jquery-1.9.1.js"]
+		}
+	},
+	"sockets": {
+		"tcp": {
+			"connect": "*"
+		},
+		"tcpServer": {
+			"listen": "*"
+		}
+	},
+	"permissions": []
+}

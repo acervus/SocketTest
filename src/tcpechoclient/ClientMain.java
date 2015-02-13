@@ -22,7 +22,7 @@ import java.net.SocketException;
 public class ClientMain {
 	public static void main(String[] args) throws IOException {
 		String server = "localhost";
-		int servPort = 5000;
+		int servPort = 3000;
 		byte[] data = "Hello, Net world".getBytes();
 		byte[] msg = new byte[data.length];
 		// クライアントソケットの作成
