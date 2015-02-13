@@ -1,8 +1,8 @@
 {
-	"name" : "FastHelp5 Make Test Case",
+	"name" : "Tcp Client Server",
 	"version" : "1.0",
 	"manifest_version" : 2,
-	"description" : "FastHelp5 make test case tool.",
+	"description" : "Tcp Client Server Test.",
 	"background_page" : "background.html",
 	"icons": { 
 		"16": "image/icon16.png",
@@ -11,7 +11,7 @@
 	"content_scripts": [
 		{
 			"matches": ["http://*/*"],
-			"js": ["js/jquery-1.9.1.js", "js/MTC.js"],
+			"js": ["js/jquery-1.9.1.js", "js/TcpClient.js"],
 			"all_frames": true
 		}
 	]
