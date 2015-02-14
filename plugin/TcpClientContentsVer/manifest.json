@@ -3,19 +3,18 @@
 	"version" : "1.0",
 	"manifest_version" : 2,
 	"description" : "Tcp Client Server Test.",
-	"permissions": [
-		"tabs", "<all_urls>", "contextMenus"
-	],
+	"background_page": "background.html",
 	"icons": { 
 		"16": "image/icon16.png",
 		"48": "image/icon48.png",
 		"128": "image/icon128.png" },
-	"content_scripts": [
-		{
-			"matches": ["http://*/*"],
-			"js": ["js/jquery-1.9.1.js", "js/contentscript.js"],
-			"all_frames": true
-		}
+	"content_scripts":[{
+		"matches": ["http://*/*"],
+		"js": ["js/jquery-1.9.1.js", "js/content_script.js"],
+		"run_at": "document_end"
+	}],
+	"permissions": [
+    	"tabs", "http://*/*"
 	],
 	"app": {
 		"background": {

@@ -22,6 +22,10 @@ chrome.sockets.tcpServer.create({}, function(createInfo) {
 chrome.sockets.tcpServer.onAccept.addListener(function(info) {
     if (info.socketId === serverSocketId) {
         chrome.sockets.tcp.setPaused(info.clientSocketId, false);
+        //メッセージ送信
+		chrome.runtime.sendMessage({name: "sendMessageTest"}, function(response) {
+    		console.log(response);
+		});
     }
 });
  
