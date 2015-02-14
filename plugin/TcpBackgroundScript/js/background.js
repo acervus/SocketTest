@@ -26,6 +26,12 @@ chrome.sockets.tcpServer.onAccept.addListener(function(info) {
 		chrome.runtime.sendMessage({name: "sendMessageTest"}, function(response) {
     		console.log(response);
 		});
+		//メッセージ送信2
+		chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+			chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"}, function(response) {
+				console.log(response.farewell);
+			});
+		});
     }
 });
  
