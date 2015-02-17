@@ -1,3 +1,13 @@
-��background.js����contentscript.js�Ƀ��b�Z�[�W�𑗂���@
+■backgroundとcontentsの通信
 http://tigawa.github.io/blog/2013/10/13/chrome-extensions-message/
 http://k4200.hatenablog.com/entry/20130909/1378743630
+
+■google App概要
+http://www.slideshare.net/yoshikawa_t/chrome-apps
+
+■content_scriptsからWindow内objectを操作する方法
+http://0-9.tumblr.com/post/56034854974/method-of-operating-a-window-object-from-content-scripts
+
+■プラグイン作り方参考
+http://gihyo.jp/dev/serial/01/chrome-web-store/0008
+

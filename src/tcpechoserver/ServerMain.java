@@ -2,8 +2,6 @@
  * Project : SocketTest
  * File : ServerMain.java
  * Date : 2015/02/14 kyou
- *
- * Copyright 2015 TechMatrix Corporation, Inc. All rights reserved.
  */
 package tcpechoserver;
 

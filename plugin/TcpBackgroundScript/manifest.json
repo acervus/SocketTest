@@ -1,0 +1,26 @@
+{
+	"name" : "Tcp Background Script",
+	"version" : "1.0",
+	"manifest_version" : 2,
+	"description" : "Tcp ackground Script Test.",
+	"icons": { 
+		"16": "image/icon16.png",
+		"48": "image/icon48.png",
+		"128": "image/icon128.png" },
+	"permissions": [
+    	"http://*/*"
+	],
+	"app": {
+		"background": {
+			"scripts": ["js/background.js"]
+		}
+	},
+	"sockets": {
+		"tcp": {
+			"connect": "*"
+		},
+		"tcpServer": {
+			"listen": "*"
+		}
+	}
+}
