@@ -11,3 +11,5 @@ http://0-9.tumblr.com/post/56034854974/method-of-operating-a-window-object-from-
 ■プラグイン作り方参考
 http://gihyo.jp/dev/serial/01/chrome-web-store/0008
 
+■Appと Extension(連携できそう)
+http://stackoverflow.com/questions/16015874/communicating-between-a-chrome-packaged-app-and-a-chrome-extension
