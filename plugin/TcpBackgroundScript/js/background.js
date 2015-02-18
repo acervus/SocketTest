@@ -8,8 +8,8 @@ chrome.sockets.tcpServer.create({}, function(createInfo) {
     // サーバ用のソケット
     serverSocketId = createInfo.socketId;
  
-    // 3000番ポートをlisten
-    chrome.sockets.tcpServer.listen(serverSocketId, '0.0.0.0', 3000, function(resultCode) {
+    // 10000番ポートをlisten
+    chrome.sockets.tcpServer.listen(serverSocketId, '127.0.0.1', 10000, function(resultCode) {
         if (resultCode < 0) {
             console.log("Error listening:" + chrome.runtime.lastError.message);
         }
@@ -23,14 +23,8 @@ chrome.sockets.tcpServer.onAccept.addListener(function(info) {
     if (info.socketId === serverSocketId) {
         chrome.sockets.tcp.setPaused(info.clientSocketId, false);
         //メッセージ送信
-		chrome.runtime.sendMessage({name: "sendMessageTest"}, function(response) {
+        chrome.runtime.sendMessage("ocedebbknomphalbndnigeooicnclepc", {name: "sendMessageTest"}, function(response) {
     		console.log(response);
-		});
-		//メッセージ送信2
-		chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-			chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"}, function(response) {
-				console.log(response.farewell);
-			});
 		});
     }
 });
