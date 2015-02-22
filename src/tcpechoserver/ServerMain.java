@@ -22,7 +22,7 @@ public class ServerMain {
 	private static final int BUFSIZE = 32; // 受信バッファサイズ
 
 	public static void main(String[] args) throws IOException {
-		int servPort = 3000;
+		int servPort = 10000;
 		// サーバソケットの作成
 		ServerSocket servSock = new ServerSocket(servPort);
 		int recvMsgSize; // 受信メッセージサイズ

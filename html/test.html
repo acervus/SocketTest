@@ -3,11 +3,22 @@
  	var localValue = "local";
  	grobalValue = "global";
  </script>
+ <link rel="stylesheet" type="text/css" href="style.css">
  <head>
   <title>Test Html</title>
  </head>
  <body>
-  <h1 id="message">受信待機中…</h1>
-  <button id="button1" type="button" name="aaa" value="aaa">Click</button>
+  <section id="demo-sec" class="section">
+    <h1 id="message">■受信テスト</h1>
+    <div><textarea id="receiveMessage" rows="5" cols="20" name="body" placeholder="受信メッセージ"></textarea></div>
+    <button id="clear" class="button" style="
+    	    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo;
+    	    font-size: 12px; type="button">クリア</button>
+	<h1 id="message">■送信テスト</h1>
+    <div><textarea id="sendMessage" title="Your Message" rows="5" cols="20" name="body" placeholder="送信メッセージ"></textarea></div>
+	<button id="send" class="button" type="button" style="
+		    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo;
+		    font-size: 12px; name="sendMessage">送信</button>
+  </section>
  </body>
 </html>
