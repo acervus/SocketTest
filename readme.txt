@@ -15,22 +15,8 @@
    ③Chromeから以下URLを開き、Tcp Background Script をクリックします。
   chrome://apps/
 
-   以上で、池田さんツールと、test.html間でソケット通信が確率されます。
-   一点注意事項として、池田さんツール→test.htmlにメッセージを送信する際は、chromeのDeveloper Toolsを開いていないと動きません。
-   ※こちらは、chromeのタブにメッセージを送信する、以下の記述({active: true, currentWindow: false})によるものです。
-       パラメーターを見た感じ、{active: true, currentWindow: true}でうまくいきそうなのですが、ダメでした。リファレンスを確認します。
+   以上で、池田さんツールと、chromeプラグイン間でソケット通信が確立されます。
 
--------------------------
-  // アンアクティブのタブに送信
-  chrome.tabs.query({active: true, currentWindow: false}, function(tabs) {
-       	var param = {name: "sendMessageTest", message:request.message};
-       	for(var i=0; i<tabs.length; i++){
-       		chrome.tabs.sendMessage(tabs[i].id, param, function(response) {
-           		console.log(response);
-           	});
-       	}
-  });
--------------------------
 
 ■開発手順
     ①Chromeから以下URLを開きます。
@@ -41,5 +27,5 @@
    TcpBackgroundScript
    TcpContentScript
     
-   こちらの手順でプラグインをインストールした場合、コードの反映が即座に反映されるようになります。
+   こちらの手順でプラグインをインストールすると、コードの反映が即座に反映されるようになります。
  

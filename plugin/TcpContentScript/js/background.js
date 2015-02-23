@@ -4,8 +4,8 @@ chrome.runtime.onMessageExternal.addListener(function(request, sender, sendRespo
     if (request.name === "sendMessageTest") {
         var response = {data: "receiveMessage"};
         sendResponse(response);
-        // アンアクティブのタブに送信(デバッグウィンドウを開いている場合はこちらに入る)
-        chrome.tabs.query({active: true, currentWindow: false}, function(tabs) {
+        // アンアクティブのタブに送信
+        chrome.tabs.query({active: true}, function(tabs) {
         	var param = {name: "sendMessageTest", message:request.message};
         	for(var i=0; i<tabs.length; i++){
         		chrome.tabs.sendMessage(tabs[i].id, param, function(response) {
