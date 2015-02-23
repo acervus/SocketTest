@@ -1,5 +1,6 @@
 console.log("Reading Now");
 $(function(){
+	//受信したテキストをクリア
 	 $("#clear").click(function(){
 		 $("#receiveMessage").val("");
      });
@@ -11,6 +12,7 @@ $(function(){
 	        sendResponse(response);
 	    }
 	});
+	//送信テキストをサーバ側に送信
 	$("#send").click(function(){
 		var message = $("#sendMessage").val();
 		chrome.runtime.sendMessage({
