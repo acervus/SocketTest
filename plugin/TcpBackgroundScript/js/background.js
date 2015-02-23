@@ -71,7 +71,7 @@ chrome.runtime.onMessageExternal.addListener(function(request, sender, sendRespo
  */
 function sendMessageToExtension(message) {
 	var param = {name: "sendMessageTest", message:message};
-	chrome.runtime.sendMessage("ocedebbknomphalbndnigeooicnclepc", param, function(response) {
+	chrome.runtime.sendMessage("fcbdhigcdcolkejbgghcjhgfnmjdcdff", param, function(response) {
  		console.log(response);
 	});
 }
@@ -113,25 +113,3 @@ function ab2str(arrayBuffer) {
     }
     return text;
 }
-
-///**
-//* 
-//*/
-//function sendMessageToContents(text) {
-//	chrome.tabs.sendRequest(tab.id, {greeting: "hello"}, function(response) {
-//		// ここに受信側からレスポンスが返ってきた時にする処理を記述する。
-//		alert("step3 " + response.farewell);
-//	});
-//}
-///**
-//* リクエスト用ソケット作成
-//*/
-//chrome.sockets.tcpServer.onAccept.addListener(function(info) {
-//if (info.socketId === serverSocketId) {
-//   chrome.sockets.tcp.setPaused(info.clientSocketId, false);
-//   //メッセージ送信
-//   chrome.runtime.sendMessage("ocedebbknomphalbndnigeooicnclepc", {name: "sendMessageTest"}, function(response) {
-//		console.log(response);
-//		});
-//}
-//});
